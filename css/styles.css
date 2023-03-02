@@ -8,6 +8,9 @@
   --btn-second-color: #4d5ae5;
   --background-first-color: #2e2f42;
   --background-second-color: #f4f4fd;
+  --company-icon-color: #8e8f99;
+  --footer-hover-color: #31d0aa;
+  --footer-pre-hover-color: rgba(255, 255, 255, 10%);
 }
 
 body {
@@ -194,6 +197,15 @@ p {
   padding-bottom: 120px;
 }
 
+.about-icon-box {
+  display: flex;
+  justify-content: center;
+  background: #f4f4fd;
+  border-radius: 4px;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+
 .about-list .item {
   width: calc((100%-24px * 3) / 4);
   margin-right: 24px;
@@ -285,6 +297,72 @@ p {
   letter-spacing: 0.02em;
 }
 
+/* ----------------------social-media-icon------------------------- */
+.icon-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--btn-second-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--hover-btn-color);
+}
+.social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------------------customers---------------------------------------------- */
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+.customers-title {
+  margin-top: 0;
+  margin-bottom: 72px;
+  color: var(--header-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.customer-list {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customer-link {
+  display: flex;
+  border: 1px solid var(--company-icon-color);
+  border-radius: 4px;
+  padding: 16px 32px;
+  align-items: center;
+  color: var(--company-icon-color);
+}
+
+.customer-link:hover,
+.customer-link:focus {
+  color: var(--hover-btn-color);
+  border-color: var(--hover-btn-color);
+}
+.company-icon {
+  fill: currentColor;
+}
 /*------------------------------ footer --------------------------------------------*/
 
 .footer-container {
@@ -293,10 +371,58 @@ p {
   padding-bottom: 100px;
 }
 
+.footer-wrap {
+  display: flex;
+  align-items: baseline;
+}
 .footer-text {
   width: 264px;
   margin-top: 16px;
   color: var(--footer-text-color);
+}
+.footer-left-part {
+  margin-right: 120px;
+}
+
+.social-link-text {
+  font-weight: 500;
+  color: var(--btn-first-color);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.social-link-wrap {
+  display: flex;
+  width: 208px;
+}
+
+.footer-list .footer-icon-item {
+  margin-right: 16px;
+}
+.footer-list .footer-icon-item:last-child {
+  margin-right: 0;
+}
+
+.footer-social-link {
+  background-color: var(--footer-pre-hover-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--footer-hover-color);
+}
+
+.footer-social-icon {
+  width: 24px;
+  height: 24px;
 }
 
 /*  --------------------------------------PORTFOLIO!-------------------------!!!!!!!!!*/
@@ -326,6 +452,9 @@ p {
 .filtres-button:hover {
   background: var(--hover-btn-color);
   color: var(--btn-first-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-color: var(--hover-btn-color);
 }
 
 .filtres-button {
@@ -349,21 +478,32 @@ p {
   justify-content: space-between;
 }
 
-/* .galery-list .item {
-  width: calc((100%-24px * 2) / 3);
+.galery-list .item {
   margin-right: 24px;
-} */
+  margin-bottom: 48px;
+  width: calc((100% - (24px * 2)) / 3);
+}
 
-/* .galery-list .item:nth-child(3n) {
+.galery-list .item:nth-child(3n) {
   margin-right: 0;
-} */
+}
+.galery-list .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
 
 .gallery-link {
+  display: block;
   color: var(--main-page-color);
   font-size: 16px;
   line-height: 24px;
   text-decoration: none;
   margin: 0;
+}
+
+.item .gallery-link:hover,
+.item .gallery-link:focus {
+  box-shadow: 0px 1px 6px rgb(46 47 66 / 8%), 0px 1px 1px rgb(46 47 66 / 16%),
+    0px 2px 1px rgb(46 47 66 / 8%);
 }
 
 .gallery-header {
