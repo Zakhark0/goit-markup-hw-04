@@ -149,13 +149,16 @@ p {
 
 /* --------------------hero--------------------------------- */
 .hero {
-  background: var(--background-first-color);
   padding: 188px;
   text-align: center;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/hero-background.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
+  background-color: var(--background-first-color);
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-header {
@@ -200,9 +203,11 @@ p {
 .about-icon-box {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 264px;
+  height: 112px;
   background: #f4f4fd;
   border-radius: 4px;
-  padding: 24px 100px;
   margin-bottom: 8px;
 }
 
@@ -341,18 +346,23 @@ p {
   text-transform: capitalize;
 }
 
-.customer-list {
-  justify-content: space-between;
-  align-items: center;
-}
-
 .customer-link {
   display: flex;
   border: 1px solid var(--company-icon-color);
   border-radius: 4px;
-  padding: 16px 32px;
+  width: 168px;
+  height: 88px;
+  justify-content: center;
   align-items: center;
   color: var(--company-icon-color);
+}
+.customer-list .customer-item {
+  width: calc((100%-5 * 24px) / 6);
+  margin-right: 24px;
+}
+
+.customer-list .customer-item:last-child {
+  margin-right: 0;
 }
 
 .customer-link:hover,
@@ -476,7 +486,6 @@ p {
 
 .galery-list {
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .galery-list .item {
@@ -495,8 +504,6 @@ p {
 .gallery-link {
   display: block;
   color: var(--main-page-color);
-  font-size: 16px;
-  line-height: 24px;
   text-decoration: none;
   margin: 0;
 }
